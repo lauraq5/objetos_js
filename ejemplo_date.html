@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo de Input de Fecha en HTML</title>
+</head>
+<body>
+
+<form>
+  <label for="fecha">Selecciona una fecha:</label>
+  <input type="date" id="fecha" name="fecha">
+  <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Date en JavaScript</title>
+</head>
+<body>
+
+<h1>Fecha Actual</h1>
+<p id="fecha_actual"></p>
+
+<script>
+  // Obtener la fecha actual
+  var fechaActual = new Date();
+
+  // Formatear la fecha en un formato legible
+  var opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  var fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
+
+  // Mostrar la fecha en un elemento HTML
+  document.getElementById("fecha_actual").textContent = fechaFormateada;
+</script>
+
+</body>
+</html>
